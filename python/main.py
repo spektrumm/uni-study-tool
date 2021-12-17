@@ -20,10 +20,11 @@ def randomizeQuestion(questionList):
     return(randIndex)
 
 
-randomizeQuestion(questionList)
+randomizeQuestion(questionList)  # call function
 
-print(randIndex)
+print(randIndex)  # debug
 i = 0
+# loop to print out questions ordered in the randomized order previously generated
 for questions in range(len(questionList)):
     printIndex = randIndex[i]
     qNum = i + 1

@@ -14,5 +14,9 @@ const qMBB324 = [
     {
         Q: 'Which non covalent interactions stimulate protein folding?',
         A: 'vdW and H-bond' && 'H-bond and vdW'
+    },
+    {
+        Q: 'What external factor drivers protein folding?',
+        A: 'Thermal Energy'
     }
 ]
