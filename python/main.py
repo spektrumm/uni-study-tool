@@ -2,7 +2,7 @@ import random
 import json
 
 randIndex = []
-questionList = ['one', '2', 'three', 'e']
+questionList = []
 
 
 def randomizeQuestion(questionList):
@@ -30,3 +30,20 @@ for questions in range(len(questionList)):
     qNum = i + 1
     print(f'Q{qNum}: {questionList[printIndex]}')
     i += 1
+
+
+def askQuestion(qList, index):
+    i = 0
+    printIndex = randIndex[i]
+    qNum = i + 1
+    for questions in range(len(qList)):
+        print(f'Q{qNum}: {qList}')
+        userIn = input('Enter your answer: ').lower()
+        if userIn == qList[i][1].lower():
+            print('Correct.')
+        else:
+            print('Incorrect.')
+        i += 1
+
+
+askQuestion(questionList, randIndex)
