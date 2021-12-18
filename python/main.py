@@ -5,6 +5,10 @@ randIndex = []
 questionList = []
 
 
+def make2DArray(list1, list2):
+    print(0)
+
+
 def randomizeQuestion(questionList):
 
     indexLength = len(questionList)
@@ -23,23 +27,16 @@ def randomizeQuestion(questionList):
 randomizeQuestion(questionList)  # call function
 
 print(randIndex)  # debug
-i = 0
-# loop to print out questions ordered in the randomized order previously generated
-for questions in range(len(questionList)):
-    printIndex = randIndex[i]
-    qNum = i + 1
-    print(f'Q{qNum}: {questionList[printIndex]}')
-    i += 1
 
 
 def askQuestion(qList, index):
     i = 0
     printIndex = randIndex[i]
     qNum = i + 1
-    for questions in range(len(qList)):
-        print(f'Q{qNum}: {qList}')
+    for question in range(len(qList)):
+        print(f'Q{qNum}: {qList[printIndex][0]}')
         userIn = input('Enter your answer: ').lower()
-        if userIn == qList[i][1].lower():
+        if userIn == qList[printIndex][1].lower():
             print('Correct.')
         else:
             print('Incorrect.')
