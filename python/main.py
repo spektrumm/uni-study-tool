@@ -5,10 +5,6 @@ randIndex = []
 questionList = []
 
 
-def make2DArray(list1, list2):
-    print(0)
-
-
 def randomizeQuestion(questionList):
 
     indexLength = len(questionList)

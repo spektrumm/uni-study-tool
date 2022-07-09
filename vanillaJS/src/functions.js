@@ -9,7 +9,7 @@ function randomizeList(qList) {
     for (const items in qList) { // loop through given list, logging correct or incorrect
         console.log(qList[qIndex].Q);
         let response = window.prompt(qList[qIndex].Q); //scuffed temp input method
-        if(response === qList[qIndex].A) {
+        if(response === qList[qIndex].correct) {
             score++;
             alert('Correct.');
             console.log('Correct.');
