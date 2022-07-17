@@ -1,5 +1,3 @@
-import {randomizeIndex, qMBB324, score} from './functions.js';
-
 function App() {
   //randomizeIndex(qMBB324)
 

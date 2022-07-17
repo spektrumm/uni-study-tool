@@ -1,8 +1,8 @@
-const fs = require("fs");
+const fs = require('fs');
 const fileName = "./vanillaJS/src/data/previousLists.json";
 
-function readJson(fileName) {
-    fs.readFile(fileName, "utf8", (err, jsonString) => {
+function readJson() {
+    readFile(fileName, "utf8", (err, jsonString) => {
         if (err) {
           console.log("File read failed:", err);
           return;
@@ -12,8 +12,8 @@ function readJson(fileName) {
       });
 }
 
-function writeJson(fileName, jsonString) {
-    fs.writeFile(fileName, jsonString, (err) => {
+function writeJson(jsonString) {
+    writeFile(fileName, jsonString, (err) => {
         if (err) {
           console.log("File write failed:", err);
           return;
@@ -22,3 +22,4 @@ function writeJson(fileName, jsonString) {
       });
 }
 
+export { readJson, writeJson };

@@ -3,7 +3,6 @@ var input = document.getElementById("userInput");
 var ul = document.querySelector("ul");
 var item = document.getElementsByTagName("li");
 var n = 0;
-const readJson = require("./vanillaJS/src/jsonIO.js");
 
 function inputLength(){
 	return input.value.length;
@@ -27,7 +26,7 @@ function createListElement() {
 	var dBtn = document.createElement("button");
 	dBtn.appendChild(document.createTextNode("X"));
 	li.appendChild(dBtn);
-	dBtn.addEventListener("click", deleteListItem); 
+	dBtn.addEventListener("click", deleteListItem);
     // later TODO: add link to be able to click on and redirect to achieve/canvas review questions, separate button for "checking off"
 
 
@@ -67,9 +66,16 @@ function addListAfterKeypress(event) {
 }
 
 function storeList(List){
-	localStorage.setItem(n, List);
+	const listItem = {
+		entry: List,
+		order: n
+	}
+	
+	
+	console.log(listItem);
+	console.log(List);
 }
-
+/*
 function checkLocalStorage(){
 	if (localStorage.length > 0) {
 		for (var i = 0; i < localStorage.length; i++) {
@@ -119,10 +125,9 @@ function checkLocalStorage(){
 	}
 }
 
-checkLocalStorage();
 
-console.log(localStorage);
-console.log(ul);
+checkLocalStorage();
+*/
 
 enterButton.addEventListener("click",addListAfterClick);
 
